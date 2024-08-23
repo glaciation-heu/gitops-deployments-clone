@@ -1,6 +1,6 @@
 # GLACIATION Platform configuration
 
-This repository contains GitOps definitions for GLACIATION Platform.
+This repository contains GitjjOps definitions for GLACIATION Platform.
 
 ## Clusters
 
