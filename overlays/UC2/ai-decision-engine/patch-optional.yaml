@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: database-controller.uc2
+  - host: database-controller.uc2gggg
     http:
       paths:
       - path: /
