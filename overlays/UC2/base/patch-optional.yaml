@@ -10,4 +10,4 @@ spec:
         controller:
           config:
             entries:
-              external-status-address: "10.14.2.5"
+              external-status-address: "10.14.22.5"
