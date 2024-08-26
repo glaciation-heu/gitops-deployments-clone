@@ -8,7 +8,7 @@ Platform installation to Kubernetes cluster is called GLACIATION Node. See more 
 * [Integration cluster](integration/README.md)
 * [Uce case 2 cluster](UC2/README.md)
 
-## CI/CD
+## CI/CD ==
 
 The diagram shows how CI/CD works in GLACIATION project.
 
