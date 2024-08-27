@@ -13,29 +13,10 @@ spec:
   source:
     repoURL: https://glaciation-heu.github.io/trade-off-service/helm-charts/
     chart: trade-off-service
-    targetRevision: 0.*.*
+    targetRevision: 1.*.*
     helm:
       valuesObject:
-        service:
-          port: 8080
         ingressHostName: tradeoff.integration
-        livenessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /
-            port: 8080
-            scheme: HTTP
-          initialDelaySeconds: 15
-          periodSeconds: 10
-          timeoutSeconds: 5
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8080
-            scheme: HTTP
-          initialDelaySeconds: 15
-          periodSeconds: 10
-          timeoutSeconds: 5                
   syncPolicy:
     automated:
      prune: true
