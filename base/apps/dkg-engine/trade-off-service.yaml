@@ -16,12 +16,14 @@ spec:
     targetRevision: 0.*.*
     helm:
       valuesObject:
+        service:
+          port: 8080
         ingressHostName: tradeoff.integration
         livenessProbe:
           failureThreshold: 3
           httpGet:
             path: /
-            port: 80
+            port: 8080
             scheme: HTTP
           initialDelaySeconds: 15
           periodSeconds: 10
@@ -29,7 +31,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /
-            port: 80
+            port: 8080
             scheme: HTTP
           initialDelaySeconds: 15
           periodSeconds: 10
