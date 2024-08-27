@@ -6,4 +6,5 @@ resources:
   - metadata-service.yaml
   - prediction-service.yaml
   - ui-gateway.yaml
+  - trade-off-service.yaml
   - kg-exporter.yaml
