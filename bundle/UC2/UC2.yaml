@@ -1668,7 +1668,7 @@ spec:
     chart: trade-off-service
     helm:
       valuesObject:
-        ingressHostName: tradeoff.integration
+        ingressHostName: tradeoff.uc2
     repoURL: https://glaciation-heu.github.io/trade-off-service/helm-charts/
     targetRevision: 1.*.*
   syncPolicy:
