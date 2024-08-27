@@ -45,6 +45,17 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: trade-off-service
+  namespace: argocd
+spec:
+  source:
+    helm: 
+      valuesObject: 
+        ingressHostName: trade-off-service.integration
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: prediction-service
   namespace: argocd
 spec:
