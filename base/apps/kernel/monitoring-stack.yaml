@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://hiro-microdatacenters-bv.github.io/monitoring-stack/helm-charts/
+    repoURL: https://glaciation-heu.github.io/monitoring-stack/helm-charts/
     chart: monitoring-stack
     targetRevision: 1.0.*
     helm:
