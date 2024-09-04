@@ -2319,7 +2319,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: mef-cog-uc1.uc2
+  - host: mef-sog-uc1.uc2
     http:
       paths:
       - backend:
