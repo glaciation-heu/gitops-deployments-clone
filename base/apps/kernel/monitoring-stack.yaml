@@ -84,7 +84,11 @@ spec:
               signout_redirect_url: /
             users:
               viewers_can_edit: true
+
         kepler:
+          enabled: true
+
+        idrac-exporter:
           enabled: true
 
   syncPolicy:
@@ -93,4 +97,4 @@ spec:
      selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSideApply=true
+      - ServerSid eApply=true
