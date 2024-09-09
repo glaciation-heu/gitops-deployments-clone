@@ -1325,6 +1325,8 @@ spec:
             ingressClassName: nginx
             path: /
             pathType: Prefix
+        idrac-exporter:
+          enabled: true
         influxdb:
           enabled: true
         kepler:
@@ -1380,7 +1382,7 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
-    - ServerSideApply=true
+    - ServerSid eApply=true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
