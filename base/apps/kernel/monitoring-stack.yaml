@@ -97,4 +97,4 @@ spec:
      selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSid eApply=true
+      - ServerSideApply=true
