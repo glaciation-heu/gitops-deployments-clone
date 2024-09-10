@@ -3,12 +3,16 @@ kind: Application
 metadata:
   name: idmg-decision-engine
   namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
-  helm:
-    valuesObject:
-      ingress:
-        hosts:
-          databaseController: database-controller.uc2
-          dataGenerator: data-generator.uc2
-          plugin: plugin.uc2
-          model: model.uc2
+  project: default
+  source:
+    helm:
+      valuesObject:
+        ingress:
+          hosts:
+            databaseController: database-controller.integration
+            dataGenerator: data-generator.integration
+            plugin: plugin.integration
+            model: model.integration
