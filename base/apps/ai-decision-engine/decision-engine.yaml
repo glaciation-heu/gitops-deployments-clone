@@ -14,6 +14,14 @@ spec:
   destination:
     namespace: idmg
     server: https://kubernetes.default.svc
+  helm:
+    valuesObject:
+      ingress:
+        hosts:
+          databaseController: database-controller.integration
+          dataGenerator: data-generator.integration
+          plugin: plugin.integration
+          model: model.integration
   syncPolicy:
     automated:
      prune: true
