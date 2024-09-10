@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - ../../../base/apps/ai-decision-engine
 patches:
-  - path: patch-optional.yaml
+  - path: patch-hostname.yaml
