@@ -806,17 +806,17 @@ spec:
   destination:
     namespace: idmg
     server: https://kubernetes.default.svc
-  helm:
-    valuesObject:
-      ingress:
-        hosts:
-          dataGenerator: data-generator.integration
-          databaseController: database-controller.integration
-          model: model.integration
-          plugin: plugin.integration
   project: default
   source:
     chart: cf
+    helm:
+      valuesObject:
+        ingress:
+          hosts:
+            dataGenerator: data-generator.integration
+            databaseController: database-controller.integration
+            model: model.integration
+            plugin: plugin.integration
     repoURL: https://idmg-pub.gitlab.io/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
