@@ -806,6 +806,14 @@ spec:
   destination:
     namespace: idmg
     server: https://kubernetes.default.svc
+  helm:
+    valuesObject:
+      ingress:
+        hosts:
+          dataGenerator: data-generator.uc2
+          databaseController: database-controller.uc2
+          model: model.uc2
+          plugin: plugin.uc2
   project: default
   source:
     chart: cf
@@ -2240,55 +2248,6 @@ spec:
             name: argocd-server
             port:
               number: 80
-        path: /
-        pathType: Prefix
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: decision-engine-ingress
-  namespace: idmg
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: database-controller.uc2
-    http:
-      paths:
-      - backend:
-          service:
-            name: idmgdb
-            port:
-              number: 8080
-        path: /
-        pathType: Prefix
-  - host: data-generator.uc2
-    http:
-      paths:
-      - backend:
-          service:
-            name: idmgdc
-            port:
-              number: 8080
-        path: /
-        pathType: Prefix
-  - host: plugin.uc2
-    http:
-      paths:
-      - backend:
-          service:
-            name: idmgpl
-            port:
-              number: 8080
-        path: /
-        pathType: Prefix
-  - host: model.uc2
-    http:
-      paths:
-      - backend:
-          service:
-            name: idmgml
-            port:
-              number: 8080
         path: /
         pathType: Prefix
 ---
