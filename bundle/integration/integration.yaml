@@ -1357,6 +1357,13 @@ spec:
               hosts:
               - prometheus.integration
               ingressClassName: nginx
+            resources:
+              limits:
+                cpu: 1
+                memory: 4Gi
+              requests:
+                cpu: 1
+                memory: 4Gi
         telegraf:
           config:
             agent:
