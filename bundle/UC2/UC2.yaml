@@ -1335,6 +1335,17 @@ spec:
             pathType: Prefix
         idrac-exporter:
           enabled: true
+          idracConfig:
+            hosts:
+              10.14.2.6:
+                password: calvin123
+                username: root
+              10.14.2.7:
+                password: calvin123
+                username: root
+              default:
+                password: pass
+                username: user
         influxdb:
           enabled: true
         kepler:
