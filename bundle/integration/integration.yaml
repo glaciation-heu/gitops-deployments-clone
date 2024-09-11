@@ -1333,8 +1333,6 @@ spec:
             ingressClassName: nginx
             path: /
             pathType: Prefix
-        idrac-exporter:
-          enabled: true
         influxdb:
           enabled: true
         kepler:
