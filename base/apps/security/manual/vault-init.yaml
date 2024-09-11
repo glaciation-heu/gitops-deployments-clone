@@ -5,7 +5,7 @@ metadata:
   namespace: vault
   annotations:
     argocd.argoproj.io/hook: Sync
-    argocd.argoproj.io/sync-wave: "-7"
+    argocd.argoproj.io/sync-wave: "-8"
 spec:
   template:
     spec:
@@ -134,4 +134,4 @@ spec:
         configMap:
           defaultMode: 420
           name: kes-policy
-  backoffLimit: 5
+  backoffLimit: 50
