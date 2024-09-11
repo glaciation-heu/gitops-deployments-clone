@@ -1351,19 +1351,19 @@ spec:
                 url: http://monitoring-stack-loki:3100/loki/api/v1/push
               name: loki
         prometheus:
-          resources:
-            limits:
-              cpu: 4
-              memory: 8Gi
-            requests:
-              cpu: 2
-              memory: 4Gi
           server:
             ingress:
               enabled: true
               hosts:
               - prometheus.uc2
               ingressClassName: nginx
+            resources:
+              limits:
+                cpu: 4
+                memory: 8Gi
+              requests:
+                cpu: 2
+                memory: 4Gi
         telegraf:
           config:
             agent:
