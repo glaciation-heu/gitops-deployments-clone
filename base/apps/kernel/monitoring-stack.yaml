@@ -88,9 +88,6 @@ spec:
         kepler:
           enabled: true
 
-        idrac-exporter:
-          enabled: true
-
   syncPolicy:
     automated:
      prune: true
