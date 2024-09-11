@@ -1134,7 +1134,7 @@ metadata:
   annotations:
     argocd.argoproj.io/compare-options: ServerSideDiff=true
     argocd.argoproj.io/hook: Sync
-    argocd.argoproj.io/sync-wave: "-7"
+    argocd.argoproj.io/sync-wave: "-8"
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   name: minio
@@ -1168,7 +1168,7 @@ metadata:
   annotations:
     argocd.argoproj.io/compare-options: ServerSideDiff=true
     argocd.argoproj.io/hook: Sync
-    argocd.argoproj.io/sync-wave: "-7"
+    argocd.argoproj.io/sync-wave: "-8"
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   name: minio-tenant
