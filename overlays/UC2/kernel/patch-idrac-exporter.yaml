@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: monitoring-stack
+  namespace: argocd
+spec:
+  source:
+    helm:
+      valuesObject:
+        idrac-exporter:
+          enabled: true
+          idracConfig:
+            hosts:
+              10.14.2.6:
+                username: root
+                password: calvin123
+              10.14.2.7:
+                username: root
+                password: calvin123
+              default:
+                username: user
+                password: pass
