@@ -1373,7 +1373,7 @@ spec:
               monitoring-stack-prometheus-snmp-exporter.monitoring.svc.cluster.local:9116
               \ # The SNMP exporter's real hostname:port.      \n"
         influxdb:
-          enabled: true
+          enabled: false
         kepler:
           enabled: true
         kubernetes-event-exporter:
@@ -1419,6 +1419,7 @@ spec:
                 token: encrypted
                 urls:
                 - http://monitoring-stack-influxdb2
+          enabled: false
           resources:
             limits:
               cpu: 1
