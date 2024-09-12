@@ -27,6 +27,7 @@ spec:
                 - prometheus.integration
 
         telegraf:
+          enabled: false
           resources:
             requests:
               memory: 1Gi
@@ -54,7 +55,7 @@ spec:
                   metric_buffer_limit: 500000
 
         influxdb:
-          enabled: true
+          enabled: false
         
         kubernetes-event-exporter:
           config:
