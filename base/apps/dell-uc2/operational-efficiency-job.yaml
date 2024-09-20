@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: operational-efficiency-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: operational-efficiency
+        image: pournima2024/workload_operational_efficiency:latest  # Use the local Docker registry
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Never
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+

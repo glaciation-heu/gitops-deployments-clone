@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: anomaly-detection-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: anomaly-detection
+        image: pournima2024/workload-anomaly-detection:latest  # Use the locally built image
+        imagePullPolicy: IfNotPresent  # Prevent Kubernetes from pulling the image from a remote registry
+      restartPolicy: Never
+
