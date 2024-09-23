@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: anomaly-detection
-        image: pournima2024/workload-anomaly-detection:latest  # Use the locally built image
+        image: ghcr.io/glaciation-heu/dell-uc/workload-anomaly-detection:latest  # Use the locally built image
         imagePullPolicy: IfNotPresent  # Prevent Kubernetes from pulling the image from a remote registry
       restartPolicy: Never
 
