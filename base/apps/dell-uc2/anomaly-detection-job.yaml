@@ -10,4 +10,6 @@ spec:
         image: ghcr.io/glaciation-heu/dell-uc/workload-anomaly-detection:latest  # Use the locally built image
         imagePullPolicy: IfNotPresent  # Prevent Kubernetes from pulling the image from a remote registry
       restartPolicy: Never
+            nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
 
