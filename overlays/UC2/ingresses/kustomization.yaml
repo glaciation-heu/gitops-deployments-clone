@@ -6,7 +6,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/rules/0/host
-        value: argocd.uc2
+        value: argocd.validation
     target: 
       group: networking.k8s.io
       version: v1
@@ -16,7 +16,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/rules/0/host
-        value: kafdrop.uc2
+        value: kafdrop.validation
     target:
       group: networking.k8s.io
       version: v1
@@ -26,7 +26,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/rules/0/host
-        value: mef-sog-uc1.uc2
+        value: mef-sog-uc1.validation
     target:
       group: networking.k8s.io
       version: v1

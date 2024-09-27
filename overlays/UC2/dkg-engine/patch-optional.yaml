@@ -7,7 +7,7 @@ spec:
   source:
     helm: 
       valuesObject: 
-        ingressHostName: dss-db.uc2
+        ingressHostName: dss-db.validation
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -18,7 +18,7 @@ spec:
   source:
     helm: 
       valuesObject: 
-        ingressHostName: metadata.uc2
+        ingressHostName: metadata.validation
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -29,7 +29,7 @@ spec:
   source:
     helm: 
       valuesObject: 
-        ingressHostName: data-storage.uc2
+        ingressHostName: data-storage.validation
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -40,7 +40,7 @@ spec:
   source:
     helm: 
       valuesObject: 
-        ingressHostName: kg-exporter.uc2
+        ingressHostName: kg-exporter.validation
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -51,7 +51,7 @@ spec:
   source:
     helm: 
       valuesObject: 
-        ingressHostName: tradeoff.uc2
+        ingressHostName: tradeoff.validation
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -62,4 +62,4 @@ spec:
   source:
     helm: 
       valuesObject: 
-        ingressHostName: prediction.uc2
+        ingressHostName: prediction.validation

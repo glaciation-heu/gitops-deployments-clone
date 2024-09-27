@@ -6,7 +6,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/sources/0/helm/valuesObject/ingress/hosts/0/host
-        value: data-sanitization.uc2
+        value: data-sanitization.validation
     target:
       group: argoproj.io
       version: v1alpha1
@@ -16,7 +16,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/sources/0/helm/valuesObject/ingress/hosts/0/host
-        value: spark-history-server.uc2
+        value: spark-history-server.validation
     target:
       group: argoproj.io
       version: v1alpha1
