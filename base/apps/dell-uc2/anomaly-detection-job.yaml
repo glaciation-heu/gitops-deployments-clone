@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: anomaly-detection-job
+  namespace: uc2
 spec:
   template:
     spec:
@@ -12,6 +13,6 @@ spec:
         command: ["python", "/app/workload_anomaly_detection.py"]
         args: ["--url", "http://metadata.uc2/api/v0/graph"]  # Pass URL as argument
       restartPolicy: Never
-            nodeSelector:
+      nodeSelector:
         kubernetes.io/hostname: glaciation-worker01
 
