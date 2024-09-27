@@ -2061,6 +2061,116 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
+  name: anomaly-detection-job
+  namespace: uc2
+spec:
+  template:
+    spec:
+      containers:
+      - args:
+        - --url
+        - http://metadata.uc2/api/v0/graph
+        command:
+        - python
+        - /app/workload_anomaly_detection.py
+        image: ghcr.io/glaciation-heu/dell-uc/workload-anomaly-detection:latest
+        imagePullPolicy: IfNotPresent
+        name: anomaly-detection
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+      restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: human-object-interaction-job
+  namespace: uc2
+spec:
+  template:
+    spec:
+      containers:
+      - args:
+        - --url
+        - http://metadata.uc2/api/v0/graph
+        command:
+        - python
+        - /app/workload_object_distribution.py
+        image: ghcr.io/glaciation-heu/dell-uc/workload_human_object_interaction:latest
+        imagePullPolicy: IfNotPresent
+        name: human-object-interaction
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+      restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: object-distribution-job
+  namespace: uc2
+spec:
+  template:
+    spec:
+      containers:
+      - args:
+        - --url
+        - http://metadata.uc2/api/v0/graph
+        command:
+        - python
+        - /app/workload_object_distribution.py
+        image: ghcr.io/glaciation-heu/dell-uc/workload_object_distribution:latest
+        imagePullPolicy: IfNotPresent
+        name: object-distribution
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+      restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: operational-efficiency-job
+  namespace: uc2
+spec:
+  template:
+    spec:
+      containers:
+      - args:
+        - --url
+        - http://metadata.uc2/api/v0/graph
+        command:
+        - python
+        - workload_operational_efficiency.py
+        image: ghcr.io/glaciation-heu/dell-uc/workload_operational_efficiency:latest
+        imagePullPolicy: IfNotPresent
+        name: operational-efficiency
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+      restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test-job
+  namespace: uc2
+spec:
+  template:
+    spec:
+      containers:
+      - args:
+        - --url
+        - http://metadata.uc2/api/v0/graph
+        command:
+        - python
+        - /app/workload.py
+        image: ghcr.io/glaciation-heu/dell-uc/workload_test:latest
+        imagePullPolicy: IfNotPresent
+        name: test-container
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+      restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/sync-wave: "-8"
