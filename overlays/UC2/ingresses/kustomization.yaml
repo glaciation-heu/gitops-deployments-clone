@@ -33,3 +33,13 @@ patches:
       kind: Ingress
       name: mef-sog-uc1-ingress
       namespace: mef-sog-uc1-wl
+  - patch: |-
+      - op: replace
+        path: /spec/rules/0/host
+        value: longhorn.uc2
+    target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+      name: longhorn-ingress
+      namespace: longhorn-system
