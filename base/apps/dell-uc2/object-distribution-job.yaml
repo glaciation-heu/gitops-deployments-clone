@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: object-distribution-job
+  namespace: uc2
+spec:
+  template:
+    spec:
+      containers:
+      - name: object-distribution
+        image:  ghcr.io/glaciation-heu/dell-uc/workload_object_distribution:latest # Use the local Docker registry
+        imagePullPolicy:  IfNotPresent        
+        command: ["python", "/app/workload_object_distribution.py"] 
+        args: ["--url", http://metadata.uc2/api/v0/graph]  # Pass URL as argument
+      restartPolicy: Never
+      nodeSelector:
+        kubernetes.io/hostname: glaciation-worker01
+

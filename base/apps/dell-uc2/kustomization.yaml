@@ -2,3 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - dell-uc2.yaml
+  - anomaly-detection-job.yaml
+  - human-object-interaction-job.yaml
+  - object-distribution-job.yaml
+  - operational-efficiency-job.yaml
+  - test.yaml
