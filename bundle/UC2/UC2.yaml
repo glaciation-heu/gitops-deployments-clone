@@ -626,7 +626,7 @@ spec:
           className: nginx
           enabled: true
           hosts:
-          - host: data-sanitization.uc2
+          - host: data-sanitization.validation
             paths:
             - path: /
               pathType: Prefix
@@ -680,7 +680,7 @@ spec:
     chart: data-storage-service
     helm:
       valuesObject:
-        ingressHostName: data-storage.uc2
+        ingressHostName: data-storage.validation
     repoURL: https://glaciation-heu.github.io/glaciation-data-storage-service/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
@@ -707,7 +707,7 @@ spec:
     chart: data-storage-service-DB
     helm:
       valuesObject:
-        ingressHostName: dss-db.uc2
+        ingressHostName: dss-db.validation
     repoURL: https://glaciation-heu.github.io/glaciation-dssdb/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
@@ -780,7 +780,7 @@ spec:
         ingress:
           enabled: true
           hosts:
-          - host: gpm.uc2
+          - host: gpm.validation
             pathType: Prefix
             paths:
             - /
@@ -846,7 +846,7 @@ spec:
     chart: jena-fuseki
     helm:
       valuesObject:
-        ingressHostName: jena-fuseki.uc2
+        ingressHostName: jena-fuseki.validation
     repoURL: https://glaciation-heu.github.io/jena-fuseki/helm-charts/
     targetRevision: 1.*.*
   syncPolicy:
@@ -1000,7 +1000,7 @@ spec:
     chart: kg-exporter
     helm:
       valuesObject:
-        ingressHostName: kg-exporter.uc2
+        ingressHostName: kg-exporter.validation
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -1117,7 +1117,7 @@ spec:
     chart: metadata-service
     helm:
       valuesObject:
-        ingressHostName: metadata.uc2
+        ingressHostName: metadata.validation
     repoURL: https://glaciation-heu.github.io/glaciation-metadata-service/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
@@ -1187,7 +1187,7 @@ spec:
             annotations:
               nginx.ingress.kubernetes.io/backend-protocol: HTTPS
             enabled: true
-            host: glaciation-tenant.uc2
+            host: glaciation-tenant.validation
             ingressClassName: nginx
             path: /
             pathType: Prefix
@@ -1195,7 +1195,7 @@ spec:
             annotations:
               nginx.ingress.kubernetes.io/backend-protocol: HTTPS
             enabled: true
-            host: glaciation-tenant-console.uc2
+            host: glaciation-tenant-console.validation
             ingressClassName: nginx
             path: /
             pathType: Prefix
@@ -1329,7 +1329,7 @@ spec:
           ingress:
             enabled: true
             hosts:
-            - grafana.uc2
+            - grafana.validation
             ingressClassName: nginx
             path: /
             pathType: Prefix
@@ -1392,7 +1392,7 @@ spec:
             ingress:
               enabled: true
               hosts:
-              - prometheus.uc2
+              - prometheus.validation
               ingressClassName: nginx
             resources:
               limits:
@@ -1543,7 +1543,7 @@ spec:
     chart: prediction-service
     helm:
       valuesObject:
-        ingressHostName: prediction.uc2
+        ingressHostName: prediction.validation
     repoURL: https://glaciation-heu.github.io/glaciation-prediction-service/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
@@ -1600,7 +1600,7 @@ spec:
     chart: semantification-service
     helm:
       valuesObject:
-        ingressHostName: semantification.uc2
+        ingressHostName: semantification.validation
     repoURL: https://glaciation-heu.github.io/glaciation-semantification-service/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
@@ -1634,7 +1634,7 @@ spec:
           className: nginx
           enabled: true
           hosts:
-          - host: spark-history-server.uc2
+          - host: spark-history-server.validation
             paths:
             - path: /
               pathType: Prefix
@@ -1723,7 +1723,7 @@ spec:
     chart: trade-off-service
     helm:
       valuesObject:
-        ingressHostName: tradeoff.uc2
+        ingressHostName: tradeoff.validation
     repoURL: https://glaciation-heu.github.io/trade-off-service/helm-charts/
     targetRevision: 1.*.*
   syncPolicy:
@@ -1785,7 +1785,7 @@ spec:
     chart: uc2-workload
     helm:
       valuesObject:
-        ingressHostName: uc2-workload.uc2
+        ingressHostName: uc2-workload.validation
     repoURL: https://glaciation-heu.github.io/glaciation-uc2-workload-service/helm-charts/
     targetRevision: 0.*.*
   syncPolicy:
@@ -1889,7 +1889,7 @@ spec:
               nginx.ingress.kubernetes.io/backend-protocol: HTTPS
             enabled: true
             hosts:
-            - host: vault.uc2
+            - host: vault.validation
             ingressClassName: nginx
           resources:
             limits:
@@ -2285,7 +2285,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: argocd.uc2
+  - host: argocd.validation
     http:
       paths:
       - backend:
@@ -2304,7 +2304,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: kafdrop.uc2
+  - host: kafdrop.validation
     http:
       paths:
       - backend:
@@ -2325,7 +2325,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: mef-sog-uc1.uc2
+  - host: mef-sog-uc1.validation
     http:
       paths:
       - backend:
