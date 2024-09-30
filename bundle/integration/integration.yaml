@@ -1684,6 +1684,11 @@ spec:
     chart: trade-off-service
     helm:
       valuesObject:
+        config:
+          metadata-service:
+            url: http://metadata-service/api/v0/graph?query={query}
+          prometheus:
+            url: http://monitoring-stack-prometheus-server.monitoring/api/v1/query?query={query}
         ingressHostName: tradeoff.integration
     repoURL: https://glaciation-heu.github.io/trade-off-service/helm-charts/
     targetRevision: 1.*.*
