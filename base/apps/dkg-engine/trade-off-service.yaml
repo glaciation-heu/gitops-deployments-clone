@@ -17,6 +17,11 @@ spec:
     helm:
       valuesObject:
         ingressHostName: tradeoff.integration
+        config:
+          metadata-service:
+            url: http://metadata-service/api/v0/graph?query={query}
+          prometheus:
+            url: http://monitoring-stack-prometheus-server.monitoring/api/v1/query?query={query}            
   syncPolicy:
     automated:
      prune: true
