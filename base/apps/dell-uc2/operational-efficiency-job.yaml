@@ -11,7 +11,7 @@ spec:
         image: ghcr.io/glaciation-heu/dell-uc/workload_operational_efficiency:latest # Use the local Docker registry
         imagePullPolicy: IfNotPresent
         command: ["python", "workload_operational_efficiency.py"]
-        args: ["--url", http://metadata.uc2/api/v0/graph]  # Pass URL as argument
+        args: ["--url", http://metadata.validation/api/v0/graph]
       restartPolicy: Never
       nodeSelector:
         kubernetes.io/hostname: glaciation-worker01
