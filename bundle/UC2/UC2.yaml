@@ -2118,7 +2118,7 @@ spec:
       containers:
       - args:
         - --url
-        - http://metadata.uc2/api/v0/graph
+        - http://metadata.validation/api/v0/graph
         command:
         - python
         - workload_operational_efficiency.py
