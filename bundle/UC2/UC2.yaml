@@ -2096,7 +2096,7 @@ spec:
       containers:
       - args:
         - --url
-        - http://metadata.uc2/api/v0/graph
+        - http://metadata.validation/api/v0/graph
         command:
         - python
         - /app/workload_object_distribution.py
