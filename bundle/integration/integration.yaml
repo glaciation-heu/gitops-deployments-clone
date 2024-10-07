@@ -847,6 +847,15 @@ spec:
     helm:
       valuesObject:
         ingressHostName: jena-fuseki.integration
+        persistence:
+          size: 30Gi
+        resources:
+          limits:
+            cpu: 500m
+            memory: 3G
+          requests:
+            cpu: 500m
+            memory: 3G
     repoURL: https://glaciation-heu.github.io/jena-fuseki/helm-charts/
     targetRevision: 1.*.*
   syncPolicy:
