@@ -20,6 +20,15 @@ spec:
     helm:
       valuesObject:
         ingressHostName: jena-fuseki.integration
+        resources:
+          limits:
+            cpu: 500m
+            memory: 3G
+          requests:
+            cpu: 500m
+            memory: 3G
+        persistence:
+          size: 30Gi
   syncPolicy:
     automated:
      prune: true
